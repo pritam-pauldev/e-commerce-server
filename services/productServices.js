@@ -1,5 +1,6 @@
+const path = require("path");
 const getProductService = (req, res) => {
-  res.send("Fetching all products");
+  res.sendFile(path.join(__dirname, "..", "view", "product.html"));
 };
 
 const getProductByIdService = (req, res) => {
@@ -11,7 +12,7 @@ const postProductService = (req, res) => {
 };
 
 module.exports = {
-    getProductService,
-    getProductByIdService,
-    postProductService
-}
+  getProductService,
+  getProductByIdService,
+  postProductService,
+};
