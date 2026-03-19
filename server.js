@@ -5,6 +5,10 @@ const routerProduct = require("./routes/product");
 const routerCart = require("./routes/cart");
 
 app.use("/user", routerUser);
+
+app.use(express.static('public'));
+app.use(express.json());
+
 app.use("/product", routerProduct);
 app.use("/cart", routerCart);
 

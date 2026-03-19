@@ -8,7 +8,10 @@ const getProductByIdService = (req, res) => {
 };
 
 const postProductService = (req, res) => {
-  res.send("Adding a new product");
+  // res.send("Adding a new product");
+  const data = req.body;
+  console.log(data.productName);
+  res.json({ value: data.productName });
 };
 
 module.exports = {
