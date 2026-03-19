@@ -1,17 +1,13 @@
-const getUser = (req, res) => {
-  res.send(`Fetching all users`);
-};
+const userServices = require("../services/userServices");
 
-const getUserById = (req, res) => {
-  res.send(`Fetching user with ID: ${req.params.id}`);
-};
+const getUser = userServices.getUserService;
 
-const postUser = (req, res) => {
-  res.send("Adding a new User");
-};
+const getUserById = userServices.getUserByIdService;
+
+const postUser = userServices.postUserService;
 
 module.exports = {
-    getUser,
-    getUserById,
-    postUser
-}
+  getUser,
+  getUserById,
+  postUser,
+};

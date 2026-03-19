@@ -1,14 +1,10 @@
-const getProduct = (req, res) => {
-  res.send("Fetching all products");
-};
+const productServices = require("../services/productServices")
 
-const getProductById = (req, res) => {
-  res.send(`Fetching product with ID: ${req.params.id}`);
-};
+const getProduct = productServices.getProductService;
 
-const postProduct = (req, res) => {
-  res.send("Adding a new product");
-};
+const getProductById = productServices.getProductByIdService;
+
+const postProduct = productServices.postProductService;
 
 module.exports = {
     getProduct,

@@ -1,10 +1,8 @@
-const getCartById = (req, res) => {
-  res.send(`Fetching cart for user with ID: ${req.params.userId}`);
-};
+const cartServices = require("../services/cartServices");
 
-const postCartById = (req, res) => {
-  res.send(`Adding product to cart for user with ID: ${req.params.userId}`);
-};
+const getCartById = cartServices.getCartById;
+
+const postCartById = cartServices.postCartById;
 
 module.exports = {
   getCartById,
